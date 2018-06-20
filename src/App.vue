@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-	<m-header :header="seller"></m-header>
+	<m-header :seller="seller"></m-header>
 	<div class="tab border-1px">
 		<div class="tab-item"><router-link to="/goods" class="active">商品</router-link></div>
 		<div class="tab-item"><router-link to="/rattings">评论</router-link></div>
 		<div class="tab-item"><router-link to="/seller">商家</router-link></div>
 	</div>
-	<router-view></router-view>
+	<router-view :seller="seller"></router-view>
   </div>
 </template>
 
@@ -22,7 +22,9 @@ export default {
   name: 'App',
   data() {
   	return {
-  		seller: {}
+  		seller: {
+  			type:Object
+  		}
   	}
   },
   created() {
