@@ -38,9 +38,9 @@
           </li>
         </ul>
       </div>
-      <shopcart ref="shopcart" :minPrice="seller.minPrice" :deliveryPrice="seller.deliveryPrice"></shopcart>
+      <shopcart ref="shopcart" :selectFoods="selectFoods" :minPrice="seller.minPrice" :deliveryPrice="seller.deliveryPrice"></shopcart>
     </div>
-    <!-- <food @add="addFood" :food="selectedFood" ref="food"></food>:selectFoods="" -->
+    <food @add="addFood" :food="selectedFood" ref="food"></food>
   </div>
 </template>
 
@@ -48,7 +48,7 @@
   import BScroll from 'better-scroll';
   import shopcart from 'components/shopcart/shopcart';
   import cartcontrol from 'components/cartcontrol/cartcontrol';
-//   import food from 'components/food/food';
+  import food from 'components/food/food';
   const ERR_OK = 0;
   const debug = process.env.NODE_ENV !== 'production';
   export default {
@@ -162,7 +162,7 @@
     components: {
       shopcart,
       cartcontrol,
-    //   food
+      food
     }
   };
 </script>

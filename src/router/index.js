@@ -22,6 +22,10 @@ const Seller = (resolve) => {
 export default new Router({
   routes: [
     {
+      path: '/',
+      redirect: '/goods'
+    },
+    {
       path: '/goods',
       component: Goods
     },
