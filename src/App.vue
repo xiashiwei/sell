@@ -6,15 +6,14 @@
 		<div class="tab-item"><router-link to="/rattings">评论</router-link></div>
 		<div class="tab-item"><router-link to="/seller">商家</router-link></div>
 	</div>
-	<router-view :seller="seller"></router-view>
+	<keep-alive>
+      <router-view :seller="seller"></router-view>
+    </keep-alive>
   </div>
 </template>
 
 <script type='text/ecmascript-6'>
 import MHeader from './components/header/header.vue'
-import goods from './components/goods/goods.vue'
-import rattings from './components/rattings/rattings.vue'
-import seller from './components/seller/seller.vue'
 
 const ERR_OK = 0;
 
@@ -39,10 +38,7 @@ export default {
 
   },
   components: {
-  	MHeader,
-  	goods,
-  	rattings,
-  	seller
+  	MHeader
   }
 };
 </script>
