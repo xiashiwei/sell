@@ -27,7 +27,7 @@ export default {
   	}
   },
   created() {
-  	this.$http.get('/api/seller').then((response) => {
+  	this.$http.get('https://bird.ioliu.cn/v1?url=http://ustbhuangyi.com/sell/api/seller').then((response) => {
   		response=response.body;
   		if(response.errno===ERR_OK){
 			this.seller=response.data

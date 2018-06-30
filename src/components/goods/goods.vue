@@ -91,7 +91,7 @@
     },
     created() {
       this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee'];
-      const url = debug ? '/api/goods' : 'http://ustbhuangyi.com/sell/api/goods';
+      const url = debug ? '/api/goods' : 'https://bird.ioliu.cn/v1?url=http://ustbhuangyi.com/sell/api/goods';
       this.$http.get(url).then((response) => {
         response = response.body;
         if (response.errno === ERR_OK) {
